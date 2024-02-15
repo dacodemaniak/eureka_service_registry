@@ -1,0 +1,11 @@
+spring:
+  config:
+    import: optional:file:.env[.properties]
+eureka:
+  client: 
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl: 
+      defaultZone: http://${SERVER_HOST}/${SERVER_PORT}/eureka
+server:
+  port: ${SERVER_PORT}
